@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ui</title>
+<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="../easyui.css">
+<link rel="stylesheet" type="text/css" href="../toastr.css">
+<script type="text/javascript" src="../jquery.min.js"></script>
+<script type="text/javascript" src="../jquery.easyui.min.js"></script>
+<script type="text/javascript" src="../jquery.easyui.extend.js"></script>
+<script type="text/javascript" src="../toastr.js"></script>
+<script type="text/javascript" src="../jquery.notice.js"></script>
+</head>
+<body>
+	<h3>EasyUI Tabs 标签页/选项卡</h3>
+	<p>通过 $.fn.tabs.defaults 重写默认的 defaults。</p>
+	<h3>依赖</h3>
+	<p>panel</p>
+	<p>linkbutton</p>
+	<h3>用法</h3>
+	<h4>创建标签页（Tabs）</h4>
+	<p>通过标记创建标签页（Tabs）</p>
+	<p>从标记创建标签页（Tabs）更容易，我们不需要写任何 JavaScript 代码。记住把 'easyui-tabs' class 添加到 <div> 标记。每个标签页面板（tab panel）通过子 <div> 标记被创建，其用法与面板（panel）一样。</p>
+	<div id="tt" class="easyui-tabs" style="width:500px;height:250px;">
+            <div title="Tab1" data-options="iconCls:'fa fa-apple'" style="padding:20px;display:none;">
+                tab1
+            </div>
+            <div title="Tab2" data-options="closable:true,iconCls:'fa fa-android'" style="overflow:auto;padding:20px;display:none;">
+                tab2
+            </div>
+            <div title="Tab3" data-options="iconCls:'fa fa-amazon',closable:true" style="padding:20px;display:none;">
+                tab3
+            </div>
+        </div>
+</body>
+</html>

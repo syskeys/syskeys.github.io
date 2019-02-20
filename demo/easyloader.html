@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ui</title>
+<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="../easyui.css">
+<link rel="stylesheet" type="text/css" href="../toastr.css">
+<script type="text/javascript" src="../jquery.min.js"></script>
+<script type="text/javascript" src="../jquery.easyui.min.js"></script>
+<script type="text/javascript" src="../jquery.easyui.extend.js"></script>
+<script type="text/javascript" src="../toastr.js"></script>
+<script type="text/javascript" src="../jquery.notice.js"></script>
+</head>
+<body>
+	<h3>EasyUI Easyloader 加载器</h3>
+	<h3>用法</h3>
+	<h4>加载 EasyUI 模块</h4>
+	<p>easyloader.base = '../'; // 设置 easyui 的基本目录</p>
+	<p>easyloader.load('messager', function(){ // 加载指定的模块
+    $.messager.alert('Title', 'load ok');
+});</p>
+	<h4>通过绝对 url 加载脚本</h4>
+	<p>using('http://code.jquery.com/jquery-1.4.4.min.js', function(){
+    // ...
+});</p>
+	<h4>通过相对 url 加载脚本</h4>
+	<p>// 脚本相对于 easyui 目录的路径
+using('./myscript.js', function(){
+    // ...
+});</p>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ui</title>
+<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="../easyui.css">
+<link rel="stylesheet" type="text/css" href="../toastr.css">
+<script type="text/javascript" src="../jquery.min.js"></script>
+<script type="text/javascript" src="../jquery.easyui.min.js"></script>
+<script type="text/javascript" src="../jquery.easyui.extend.js"></script>
+<script type="text/javascript" src="../toastr.js"></script>
+<script type="text/javascript" src="../jquery.notice.js"></script>
+</head>
+<body>
+	<h3>EasyUI Splitbutton 分割按钮</h3>
+	<p>扩展自 $.fn.linkbutton.defaults。通过 $.fn.splitbutton.defaults 重写默认的 defaults。</p>
+	<p>与菜单按钮（menubutton）相似，分割按钮（splitbutton）也与链接按钮（linkbutton）及菜单（menu）有关。与菜单按钮（menubutton）不同的是，分割按钮（splitbutton）被分割为两部分。当移动鼠标到分割按钮（splitbutton）上时，将显示一条分割线。只有当移动鼠标在分割按钮的右侧部分时才显示菜单（menu）。</p>
+	<h3>依赖</h3>
+	<p>menubutton</p>
+	<h3>用法</h3>
+	<h4>从标记创建分割按钮（splitbutton）。</h4>
+	<a href="javascript:void(0)" id="sb" class="easyui-splitbutton"
+    data-options="menu:'#mma',iconCls:'fa fa-check fa-lg fa-fw'" onclick="javascript:alert('ok')">Ok</a>
+<div id="mma" style="width:100px;">
+    <div data-options="iconCls:'fa fa-check fa-lg fa-fw'">Ok</div>
+    <div data-options="iconCls:'fa fa-close fa-lg fa-fw'">Cancel</div>
+</div>
+</body>
+</html>

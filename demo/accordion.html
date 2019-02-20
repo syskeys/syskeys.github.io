@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ui</title>
+<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="../easyui.css">
+<link rel="stylesheet" type="text/css" href="../toastr.css">
+<script type="text/javascript" src="../jquery.min.js"></script>
+<script type="text/javascript" src="../jquery.easyui.min.js"></script>
+<script type="text/javascript" src="../jquery.easyui.extend.js"></script>
+<script type="text/javascript" src="../toastr.js"></script>
+<script type="text/javascript" src="../jquery.notice.js"></script>
+</head>
+<body>
+	<h3>EasyUI Accordion 折叠面板</h3>
+	<p>通过 $.fn.accordion.defaults 重写默认的 defaults。</p>
+	<p>折叠面板（accordion）允许您提供多个面板（panel），同时显示一个或多个面板（panel）。每个面板（panel）都有展开和折叠的内建支持。点击面板（panel）头部可展开或折叠面板（panel）主体。面板（panel）内容可通过 ajax 指定 'href' 属性来加载。用户可定义被选中的面板（panel）。如果为指定，则默认选中第一个面板（panel）。</p>
+	<h3>依赖</h3>
+	<p>panel</p>
+	<h3>用法</h3>
+	<h4>创建折叠面板（Accordion）</h4>
+	<p>通过标记创建布局（Layout）。</p>
+	<p>通过标记创建折叠面板（Accordion），添加 'easyui-accordion' class 到 <div> 标记。</p>
+	<div id="aaa" class="easyui-accordion" style="width:300px;height:auto;">
+            <div title="Title1" data-options="iconCls:'fa fa-apple fa-lg'" style="overflow:auto;padding:10px;">
+                <h3 style="color:#0099FF;">Accordion for jQuery</h3>
+                <p>Accordion is a part of easyui framework for jQuery.
+                It lets you define your accordion component on web page more easily.</p>
+            </div>
+            <div title="Title2" data-options="iconCls:'fa fa-android fa-lg',selected:true" style="padding:10px;">
+                content2
+            </div>
+            <div title="Title3" data-options="iconCls:'fa fa-amazon fa-lg'">
+                content3
+            </div>
+        </div>
+</body>
+</html>

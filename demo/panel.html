@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ui</title>
+<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="../easyui.css">
+<link rel="stylesheet" type="text/css" href="../toastr.css">
+<script type="text/javascript" src="../jquery.min.js"></script>
+<script type="text/javascript" src="../jquery.easyui.min.js"></script>
+<script type="text/javascript" src="../jquery.easyui.extend.js"></script>
+<script type="text/javascript" src="../toastr.js"></script>
+<script type="text/javascript" src="../jquery.notice.js"></script>
+</head>
+<body>
+	<h3>EasyUI Panel 面板</h3>
+	<p>通过 $.fn.panel.defaults 重写默认的 defaults。</p>
+	<p>面板（panel）当做其他内容的容器使用。它是创建其他组件（比如：Layout 布局、Tabs 标签页/选项卡、Accordion 折叠面板，等等）的基础组件。它也提供内置的可折叠、可关闭、可最大化、可最小化的行为以及其他自定义行为。面板（panel）可以简单地嵌入到网页的任何位置。</p>
+	<h3>用法</h3>
+	<h4>创建面板（Panel）</h4>
+	<p>通过标记创建面板（Panel）</p>
+	<p>从标记创建面板（Panel）更容易。把 'easyui-panel' class 添加到 <div> 标记。</p>
+	<div id="p" class="easyui-panel" title="My Panel"
+            style="width:500px;height:150px;padding:10px;background:#fafafa;"
+            data-options="iconCls:'fa fa-book fa-lg',closable:true,
+            collapsible:true,minimizable:true,maximizable:true">
+            <p>panel content.</p>
+            <p>panel content.</p>
+        </div>
+</body>
+</html>

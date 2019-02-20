@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ui</title>
+<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="../easyui.css">
+<link rel="stylesheet" type="text/css" href="../toastr.css">
+<script type="text/javascript" src="../jquery.min.js"></script>
+<script type="text/javascript" src="../jquery.easyui.min.js"></script>
+<script type="text/javascript" src="../jquery.easyui.extend.js"></script>
+<script type="text/javascript" src="../toastr.js"></script>
+<script type="text/javascript" src="../jquery.notice.js"></script>
+</head>
+<body style="padding: 20px;">
+	<table id="tt" class="easyui-treegrid" style="width:600px;height:400px"
+    data-options="idField:'id',treeField:'name'">
+    <thead>
+        <tr>
+            <th data-options="field:'name',width:180">Task Name</th>
+            <th data-options="field:'persons',width:60,align:'right'">Persons</th>
+            <th data-options="field:'begin',width:80">Begin Date</th>
+            <th data-options="field:'end',width:80">End Date</th>
+        </tr>
+    </thead>
+</table>
+</body>
+</html>

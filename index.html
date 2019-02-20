@@ -1,11 +1,295 @@
-<!doctype>
+<!DOCTYPE html>
 <html>
 <head>
-<title>
-syskeys
-</title>
+<meta charset="utf-8">
+<title>ui</title>
+<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="./easyui.css">
+<link rel="stylesheet" type="text/css" href="toastr.css">
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.easyui.min.js"></script>
+<script type="text/javascript" src="jquery.easyui.extend.js"></script>
+<script type="text/javascript" src="toastr.js"></script>
+<script type="text/javascript" src="jquery.notice.js"></script>
 </head>
-<body>
-hello git !
+<body class="easyui-layout">
+    <div data-options="region:'north',title:'header',split:false,noheader:true" style="height:80px;"></div> 
+    <div id="left" data-options="region:'west',split:false,iconCls:'icon-world'" style="width:280px;overflow-x: hidden;overflow-y: hidden;">
+        <div id="sidemenu" class="easyui-sidemenu" data-options="data:data1,border:false,onSelect:alal,width:280"></div>
+    </div> 
+    <div data-options="region:'center',split:true">
+        <iframe id="main" name="main" frameborder="0" scrolling="no" width="100%" height="99%" src="demo/default.html"></iframe>
+    </div>
 </body>
+<script type="text/javascript">
+$(function(){
+$('.sidemenu-tree').hover(function() {
+    $("#left").css('overflow-y','scroll');
+}, function() {
+    $("#left").css('overflow-y','hidden');
+});
+});
+function toa(){
+    $.notice.show('content','title');
+}
+function progress(){
+    $.messager.progress({
+        text:'加载中...'
+    });
+}
+function showmsg(){
+    $.messager.show({
+        title:'标题',
+        content:'内容'
+    });
+}
+var data1 = [{
+    text:'基础',
+    iconCls:'fa fa-bars fa-lg fa-fw',
+    state:'open',
+    children:[{
+        text:'<i class="fa fa-percent fa-lg fa-fw"></i>progressbar进度条',
+        url:'demo/progressbar.html'
+    },{
+        text:'<i class="fa fa-info fa-lg fa-fw"></i>tooltip提示框',
+        url:'demo/tooltip.html'
+    },{
+        text:'<i class="fa fa-search fa-lg fa-fw"></i>searchbox搜索框',
+        url:'demo/searchbox.html'
+    },{
+        text:'<i class="fa fa-arrows-h fa-lg fa-fw"></i>resizable可调整尺寸',
+        url:'demo/resizable.html'
+    },{
+        text:'<i class="fa fa-columns fa-lg fa-fw"></i>pagination分页',
+        url:'demo/pagination.html'
+    },{
+        text:'<i class="fa fa-arrows fa-lg fa-fw"></i>droppable可放置',
+        url:'demo/droppable.html'
+    },{
+        text:'<i class="fa fa-spinner fa-lg fa-fw"></i>easyloader加载器',
+        url:'demo/easyloader.html'
+    },{
+        text:'<i class="fa fa-arrows fa-lg fa-fw"></i>draggable可拖动',
+        url:'demo/draggable.html'
+    },{
+        text:'<i class="fa fa-exchange fa-lg fa-fw"></i>parser解析器',
+        url:'demo/parser.html'
+    },{
+        text:'<i class="fa fa-mobile fa-lg fa-fw"></i>mobile移动端',
+        url:'demo/mobile.html'
+    },{
+        text:'<i class="fa fa-circle fa-lg fa-fw"></i>badge徽标',
+        url:'demo/badge.html'
+    },{
+        text:'<i class="fa fa-bell-o fa-lg fa-fw"></i>notice提醒',
+        url:'demo/notice.html'
+    },{
+        text:'<i class="fa fa-map-o fa-lg fa-fw"></i>drawer抽屉',
+        url:'demo/drawer.html'
+    }]
+},{
+    text:'布局',
+    iconCls:'fa fa-th fa-lg fa-fw',
+    state:'open',
+    children:[{
+        text:'<i class="fa fa-th-large fa-lg fa-fw"></i>layout布局',
+        url:'demo/layout.html'
+    },{
+        text:'<i class="fa fa-chevron-right fa-lg fa-fw"></i>accordion折叠面板',
+        url:'demo/accordion.html'
+    },{
+        text:'<i class="fa fa-chevron-right fa-lg fa-fw"></i>panel面板',
+        url:'demo/panel.html'
+    },{
+        text:'<i class="fa fa-tag fa-lg fa-fw"></i>tabs标签页/选项卡',
+        url:'demo/tabs.html'
+    }]
+},{
+    text:'菜单与按钮',
+    iconCls:'fa fa-youtube-play fa-lg fa-fw',
+    state:'open',
+    children:[{
+        text:'<i class="fa fa-edit fa-lg fa-fw"></i>menu菜单',
+        url:'demo/menu.html'
+    },{
+        text:'<i class="fa fa-chevron-right fa-lg fa-fw"></i>menubutton菜单按钮',
+        url:'demo/menubutton.html'
+    },{
+        text:'<i class="fa fa-youtube-play fa-lg fa-fw"></i>splitbutton分割按钮',
+        url:'demo/splitbutton.html'
+    },{
+        text:'<i class="fa fa-youtube-play fa-lg fa-fw"></i>linkbutton链接按钮',
+        url:'demo/linkbutton.html'
+    },{
+        text:'<i class="fa fa-youtube-play fa-lg fa-fw"></i>sidemenu侧栏菜单',
+        url:'demo/sidemenu.html'
+    },{
+        text:'<i class="fa fa-toggle-on fa-lg fa-fw"></i>switchbutton开关按钮',
+        url:'demo/switchbutton.html'
+    }]
+},{
+    text:'表单',
+    iconCls:'fa fa-wpforms fa-lg fa-fw',
+    state:'open',
+    children:[{
+        text:'<i class="fa fa-euro fa-lg fa-fw"></i>numberbox数字框',
+        url:'demo/numberbox.html'
+    },{
+        text:'<i class="fa fa-calendar-check-o fa-lg fa-fw"></i>datebox日期框',
+        url:'demo/datebox.html'
+    },{
+        text:'<i class="fa fa-calendar-check-o fa-lg fa-fw"></i>datetimebox日期时间框',
+        url:'demo/datetimebox.html'
+    },{
+        text:'<i class="fa fa-calendar-check-o fa-lg fa-fw"></i>calendar日历',
+        url:'demo/calendar.html'
+    },{
+        text:'<i class="fa fa-calendar-check-o fa-lg fa-fw"></i>spinner微调器',
+        url:'demo/spinner.html'
+    },{
+        text:'<i class="fa fa-calendar-check-o fa-lg fa-fw"></i>numberspinner数值微调器',
+        url:'demo/numberspinner.html'
+    },{
+        text:'<i class="fa fa-calendar-check-o fa-lg fa-fw"></i>timespinner时间微调器',
+        url:'demo/timespinner.html'
+    },{
+        text:'<i class="fa fa-calendar-check-o fa-lg fa-fw"></i>slider滑块',
+        url:'demo/slider.html'
+    },{
+        text:'<i class="fa fa-chevron-down fa-lg fa-fw"></i>combogrid组合网格',
+        url:'demo/combogrid.html'
+    },{
+        text:'<i class="fa fa-chevron-down fa-lg fa-fw"></i>combo组合',
+        url:'demo/combo.html'
+    },{
+        text:'<i class="fa fa-chevron-down fa-lg fa-fw"></i>combobox组合框',
+        url:'demo/combobox.html'
+    },{
+        text:'<i class="fa fa-chevron-down fa-lg fa-fw"></i>combotree组合树',
+        url:'demo/combotree.html'
+    },{
+        text:'<i class="fa fa-chevron-down fa-lg fa-fw"></i>form表单',
+        url:'demo/form.html'
+    },{
+        text:'<i class="fa fa-chevron-down fa-lg fa-fw"></i>validatebox验证框',
+        url:'demo/validatebox.html'
+    },{
+        text:'<i class="fa fa-edit fa-lg fa-fw"></i>textbox文本框',
+        url:'demo/textbox.html'
+    },{
+        text:'<i class="fa fa-key fa-lg fa-fw"></i>passwordbox密码框',
+        url:'demo/passwordbox.html'
+    },{
+        text:'<i class="fa fa-key fa-lg fa-fw"></i>maskedbox掩码框',
+        url:'demo/maskedbox.html'
+    },{
+        text:'<i class="fa fa-chevron-down fa-lg fa-fw"></i>combotreegrid树形表格下拉框',
+        url:'demo/combotreegrid.html'
+    },{
+        text:'<i class="fa fa-tag fa-lg fa-fw"></i>tagbox标签框',
+        url:'demo/tagbox.html'
+    },{
+        text:'<i class="fa fa-file-o fa-lg fa-fw"></i>filebox文件框',
+        url:'demo/filebox.html'
+    },{
+        text:'<i class="fa fa-check-square-o fa-lg fa-fw"></i>checkbox复选框',
+        url:'demo/checkbox.html'
+    },{
+        text:'<i class="fa fa-dot-circle-o fa-lg fa-fw"></i>radiobox单选框',
+        url:'demo/radiobox.html'
+    },{
+        text:'<i class="fa fa-calendar fa-lg fa-fw"></i>datetimespinner日期时间微调',
+        url:'demo/datetimespinner.html'
+    }]
+},{
+    text:'窗口',
+    iconCls:'fa fa-windows fa-lg fa-fw',
+    state:'open',
+    children:[{
+        text:'<i class="fa fa-edit fa-lg fa-fw"></i>messager消息框',
+        url:'demo/messager.html'
+    },{
+        text:'<i class="fa fa-comment-o fa-lg fa-fw"></i>dialog对话框',
+        url:'demo/dialog.html'
+    },{
+        text:'<i class="fa fa-windows fa-lg fa-fw"></i>window窗口',
+        url:'demo/window.html'
+    }]
+},{
+    text:'数据网格与树',
+    iconCls:'fa fa-table fa-lg fa-fw',
+    state:'open',
+    children:[{
+        text:'<i class="fa fa-tree fa-lg fa-fw"></i>tree树',
+        url:'demo/tree.html'
+    },{
+        text:'<i class="fa fa-table fa-lg fa-fw"></i>propertygrid属性网格',
+        url:'demo/propertygrid.html'
+    },{
+        text:'<i class="fa fa-table fa-lg fa-fw"></i>datagrid数据网格',
+        url:'demo/datagrid.html'
+    },{
+        text:'<i class="fa fa-table fa-lg fa-fw"></i>treegrid树形网格',
+        url:'demo/treegrid.html'
+    },{
+        text:'<i class="fa fa-table fa-lg fa-fw"></i>datalist数据列表',
+        url:'demo/datalist.html'
+    }]
+}];
+var data = [{
+            text: 'Forms',
+            iconCls: 'fa fa-wpforms fa-lg',
+            state: 'open',
+            children: [{
+                text: 'Form Element'
+            },{
+                text: 'Wizard'
+            },{
+                text: 'File Upload'
+            }]
+        },{
+            text: 'Mail',
+            iconCls: 'fa fa-at fa-lg',
+            selected: true,
+            children: [{
+                text: 'Inbox'
+            },{
+                text: 'Sent'
+            },{
+                text: 'Trash',
+                children: [{
+                    text: 'Item1'
+                },{
+                    text: 'Item2'
+                }]
+            }]
+        },{
+            text: 'Layout',
+            iconCls: 'fa fa-table fa-lg',
+            children: [{
+                text: 'Panel'
+            },{
+                text: 'Accordion'
+            },{
+                text: 'Tabs'
+            }]
+        }];
+        function toggle(){
+            var opts = $('#sm').sidemenu('options');
+            $('#sm').sidemenu(opts.collapsed ? 'expand' : 'collapse');
+            opts = $('#sm').sidemenu('options');
+            $('#sm').sidemenu('resize', {
+                width: opts.collapsed ? 60 : 200
+            })
+        }
+        function alal(item){
+            var url = item.url;
+            var frame = document.getElementById('main');
+            if(typeof(url) != "undefined" && url != ''){
+                frame.src = item.url;
+            }else{
+                console.log('url is undefined !');
+            }
+        }
+</script>
 </html>

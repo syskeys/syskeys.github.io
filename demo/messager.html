@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ui</title>
+<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="../easyui.css">
+<link rel="stylesheet" type="text/css" href="../toastr.css">
+<script type="text/javascript" src="../jquery.min.js"></script>
+<script type="text/javascript" src="../jquery.easyui.min.js"></script>
+<script type="text/javascript" src="../jquery.easyui.extend.js"></script>
+<script type="text/javascript" src="../toastr.js"></script>
+<script type="text/javascript" src="../jquery.notice.js"></script>
+</head>
+<body style="padding: 20px;">
+	<a href="javascript:;" class="easyui-linkbutton button-info" onclick="messageralert();">messager alert</a>
+	<a href="javascript:;" class="easyui-linkbutton button-info" onclick="messagershow();">messager show</a>
+	<script type="text/javascript">
+		function messageralert(){
+			$.messager.alert('Warning','The warning message','info');
+		}
+		function messagershow(){
+			$.messager.show({
+				title:'show',
+				msg:'show'
+			});
+		}
+	</script>
+</body>
+</html>

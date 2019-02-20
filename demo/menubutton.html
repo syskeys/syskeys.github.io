@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ui</title>
+<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="../easyui.css">
+<link rel="stylesheet" type="text/css" href="../toastr.css">
+<script type="text/javascript" src="../jquery.min.js"></script>
+<script type="text/javascript" src="../jquery.easyui.min.js"></script>
+<script type="text/javascript" src="../jquery.easyui.extend.js"></script>
+<script type="text/javascript" src="../toastr.js"></script>
+<script type="text/javascript" src="../jquery.notice.js"></script>
+</head>
+<body>
+	<h3>EasyUI Menubutton 菜单按钮</h3>
+	<p>扩展自 $.fn.linkbutton.defaults。通过 $.fn.menubutton.defaults 重写默认的 defaults。</p>
+	<p>菜单按钮（menubutton）是下拉菜单的一部分。它与链接按钮（linkbutton）及菜单（menu）有关。显示链接按钮（linkbutton），隐藏菜单（menu）。当用户点击或移动鼠标到链接按钮（linkbutton）上时，将显示菜单（menu）以允许用户点击菜单。</p>
+	<h3>依赖</h3>
+	<p>menu</p>
+	<p>linkbutton</p>
+	<h3>用法</h3>
+	<h4>通常，菜单按钮（menubutton）以声明的方式从标记创建。</h4>
+	<a href="javascript:void(0)" id="mb" class="easyui-menubutton"
+    data-options="menu:'#mms',iconCls:'fa fa-pencil fa-lg fa-fw'">Edit</a>
+<div id="mms" style="width:150px;">
+    <div data-options="iconCls:'fa fa-mail-reply fa-lg fa-fw'">Undo</div>
+    <div data-options="iconCls:'fa fa-mail-forward fa-lg fa-fw'">Redo</div>
+    <div class="menu-sep"></div>
+    <div iconCls="fa fa-cut fa-lg fa-fw">Cut</div>
+    <div iconCls="fa fa-copy fa-lg fa-fw">Copy</div>
+    <div iconCls="fa fa-paste fa-lg fa-fw">Paste</div>
+    <div class="menu-sep"></div>
+    <div data-options="iconCls:'fa fa-minus fa-lg fa-fw'">Delete</div>
+    <div>Select All</div>
+</div>
+</body>
+</html>
