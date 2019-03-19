@@ -2107,10 +2107,10 @@ i, cite, em, var, address, dfn {/*斜体*/
   text-align: center;
 }
 .calendar-day {
-  border: 1px solid #fff;
+  /*border: 1px solid #fff;*/
   padding: 0;
   cursor: pointer;
-  background: #f2f2f2;
+  /*background: #f2f2f2;*/
 }
 .calendar-other-month {
   opacity: 0.3;
@@ -2182,6 +2182,7 @@ i, cite, em, var, address, dfn {/*斜体*/
 .calendar-today {
   color: #58b319;
   font-weight: bold;
+  border-radius: 50%;
 }
 .calendar-menu-year {
   border-color: #e4e8f1;
@@ -2206,6 +2207,7 @@ i, cite, em, var, address, dfn {/*斜体*/
 .calendar-menu-hover {
   color:#fff;
   background-color: #ff8000;
+  border-radius: 50%;
 }
 .calendar-text.calendar-nav-hover,
 .calendar-nextmonth.calendar-nav-hover,
@@ -2347,7 +2349,7 @@ i, cite, em, var, address, dfn {/*斜体*/
 
 /*progress*/
 .progressbar {
-  border-radius: 2px;
+  border-radius: 5px;
   overflow: hidden;
   position: relative;
 }
@@ -2359,11 +2361,11 @@ i, cite, em, var, address, dfn {/*斜体*/
   position: relative;
   overflow: hidden;
   width: 0;
-  border-radius: 2px 0 0 2px;
+  border-radius: 5px 0 0 5px;
 }
 .progressbar {
   border-left: none;
-  background: #fff;
+  background: #eee;
 }
 
 .progressbar-value .progressbar-text {
